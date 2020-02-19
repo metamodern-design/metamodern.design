@@ -5,7 +5,6 @@
     flex-col
     items-center
     px-1b
-    typeset
   `)
     figure(class=`
       max-w-10c
@@ -22,8 +21,15 @@
       pb-1b
       text-base c11_text-lg
       leading-base-narrow c11_leading-lg-narrow
+      typeset
     `)
       != content.aboutHeading
       
-    .pb-1b
+    div(class=`
+      max-w-10c
+      pb-1b
+      text-sm c11_text-base
+      leading-sm-narrow c11_leading-base-narrow
+      typeset
+    `)
       != content.aboutMain
