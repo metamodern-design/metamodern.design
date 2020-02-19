@@ -1,26 +1,29 @@
-.container(class=`
-  flex
-  justify-center
-  px-1b
-  typeset
-`)
-  figure(class=`
-    max-w-10c
-    pt-2b
-    pb-4b
-  `)
-    img(
-      src='media/metamodern-logo.svg'
-      alt='Metamodern Design Limited'
-    )
-
+.container
   div(class=`
-    max-w-10c
-    pb-1b
-    text-base c11_text-lg
-    leading-base-narrow c11_leading-lg-narrow
+    w-full
+    flex
+    flex-col
+    items-center
+    px-1b
+    typeset
   `)
-    != content.aboutHeading
-    
-  .pb-1b
-    != content.aboutMain
+    figure(class=`
+      max-w-10c
+      pt-2b
+      pb-4b
+    `)
+      img(
+        src='media/metamodern-logo.svg'
+        alt='Metamodern Design Limited'
+      )
+
+    div(class=`
+      max-w-10c
+      pb-1b
+      text-base c11_text-lg
+      leading-base-narrow c11_leading-lg-narrow
+    `)
+      != content.aboutHeading
+      
+    .pb-1b
+      != content.aboutMain
