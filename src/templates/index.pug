@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width')
+    meta(name='format-detection' content='email=no,telephone=no')
+    title= meta.title
+    meta(name='description' content=meta.description)
+    meta(name='theme-color' content='#b8d1ea')
+    link(rel='stylesheet' href=`${meta.publicUrl}index.css`)
+    link(rel='apple-touch-icon' sizes='192x192' href='media/favicon.png')
+    link(rel='icon' type='image/png' sizes='192x192' href='media/favicon.png')
+    
+  body(class=`
+    bg-white
+    text-dark-blue-purple
+    font-barlow
+    font-regular
+    text-sm c17_text-base
+    leading-sm c17_leading-base
+  `)
+    header#pageHeader(class=`
+      w-screen
+      bg-darker
+      text-lighter
+    `)
+      include /header.pug
+  
+    main#pageMain(class=`
+      w-screen
+      min-h-11c
+      py-2b c11_py-3b c17_py-4b
+    `)
+      include /main.pug
+      
+    footer#pageFooter(class=`
+      w-screen
+      min-h-7c
+      py-2b c11_py-3b c17_py-4b
+      bg-darker
+      text-lighter
+      text-sm
+      leading-sm
+    `)
+      include /footer.pug
+      
+    script(src=`${meta.publicUrl}index.js`)
