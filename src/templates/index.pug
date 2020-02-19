@@ -10,12 +10,12 @@ html(lang='en')
     meta(name='description' content=meta.description)
     meta(name='theme-color' content='#b8d1ea')
     link(rel='stylesheet' href=`${meta.publicUrl}index.css`)
-    link(rel='apple-touch-icon' sizes='192x192' href='media/favicon.png')
-    link(rel='icon' type='image/png' sizes='192x192' href='media/favicon.png')
+    link(rel='apple-touch-icon' sizes='192x192' href=`${meta.publicUrl}media/favicon.png`)
+    link(rel='icon' type='image/png' sizes='192x192' href=`${meta.publicUrl}media/favicon.png`)
     
   body(class=`
-    bg-white
-    text-dark-blue-purple
+    bg-darker-blue-purple
+    text-light
     font-barlow
     font-regular
     text-sm c17_text-base
@@ -23,8 +23,6 @@ html(lang='en')
   `)
     header#pageHeader(class=`
       w-screen
-      bg-darker
-      text-lighter
     `)
       include /header.pug
   
@@ -39,8 +37,6 @@ html(lang='en')
       w-screen
       min-h-7c
       py-2b c11_py-3b c17_py-4b
-      bg-darker
-      text-lighter
       text-sm
       leading-sm
     `)
