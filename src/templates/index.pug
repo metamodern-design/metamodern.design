@@ -33,13 +33,10 @@ html(lang='en')
     `)
       include /main.pug
       
-    footer#pageFooter(class=`
-      w-screen
-      min-h-7c
-      py-2b c11_py-3b c17_py-4b
-      text-sm
-      leading-sm
-    `)
-      include /footer.pug
+    figure.w-screen
+      img(
+        src='media/diagonal-pattern.svg'
+        alt='A decorative pattern'
+      )
       
     script(src=`${meta.publicUrl}index.js`)
