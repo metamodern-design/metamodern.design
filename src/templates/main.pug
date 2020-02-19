@@ -1,12 +1,21 @@
-.container.typeset
-  .flex.justify-center
-    figure.max-w-10c.p-1b
-      img(
-        src='media/metamodern-logo.svg'
-        alt='Metamodern Design Limited'
-      )
-  
+.container(class=`
+  flex
+  justify-center
+  px-1b
+  typeset
+`)
+  figure(class=`
+    max-w-10c
+    pt-2b
+    pb-4b
+  `)
+    img(
+      src='media/metamodern-logo.svg'
+      alt='Metamodern Design Limited'
+    )
+
   div(class=`
+    max-w-10c
     pb-1b
     text-base c11_text-lg
     leading-base-narrow c11_leading-lg-narrow
