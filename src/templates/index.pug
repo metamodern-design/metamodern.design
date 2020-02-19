@@ -33,7 +33,12 @@ html(lang='en')
     `)
       include /main.pug
       
-    figure.w-screen
+    figure(class=`
+      absolute
+      left-0
+      bottom-0
+      max-w-15c
+    `)
       img(
         src='media/diagonal-pattern.svg'
         alt='A decorative pattern'
