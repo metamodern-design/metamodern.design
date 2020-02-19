@@ -1,0 +1,3 @@
+If you're already using social media or e-commerce platforms to promote your business, we can provide a dedicated home page that will increase your visibility to search engines, help your business stand out among competitors, and help drive traffic to your store, product, or donation pages on other sites.
+
+Starting at $500, we can create a landing page with your business logo, some marketing copy, and a few external links, help you pick out a custom domain name, and launch your new site *that same day*. Alternatively, we can create a custom site to your specifications, working with you to decide on features and customizations that meet your needs and fit your marketing budget.
