@@ -25,13 +25,27 @@
       != content.about1
       
     div(class=`
-      max-w-10c
+      flex
+      items-center
+      flex-wrap
       pb-2b
-      text-base c11_text-lg
-      leading-base-narrow c11_leading-lg-narrow
-      typeset
     `)
-      != content.about2
+      figure(class=`
+        w-4c
+        pl-2b
+      `)
+        img(
+          src='media/undraw-product-tour.svg'
+          alt='Decorative illustration'
+        )
+      
+      div(class=`
+        max-w-6c
+        text-base c11_text-lg
+        leading-base-narrow c11_leading-lg-narrow
+        typeset
+      `)
+        != content.about2
       
     div(class=`
       max-w-10c
