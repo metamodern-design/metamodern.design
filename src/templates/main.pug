@@ -10,7 +10,7 @@ mixin box(classes='')
 
 mixin graphic(src)
   figure(class=`
-    max-w-6c
+    max-w-5c
     pb-2b
   `)
     img(
@@ -42,13 +42,19 @@ mixin graphic(src)
     `)
       != content.about1
       
-    +graphic('media/undraw-product-tour.svg')
-      
     +box(`
       text-base c11_text-lg
       leading-base-narrow c11_leading-lg-narrow
     `)
       != content.about2
+    
+    +graphic('media/undraw-product-tour.svg')
+      
+    +box(`
+      text-sm c11_text-base
+      leading-sm-narrow c11_leading-base-narrow
+    `)
+      != content.about3
     
     +graphic('media/undraw-social-thinking.svg')
       
@@ -56,4 +62,6 @@ mixin graphic(src)
       text-sm c11_text-base
       leading-sm-narrow c11_leading-base-narrow
     `)
-      != content.about3
+      != content.about4
+    
+    +graphic('media/undraw-usability-testing.svg')
