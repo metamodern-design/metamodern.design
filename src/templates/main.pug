@@ -1,3 +1,24 @@
+mixin box(classes='')
+  div(class=`
+    max-w-10c
+    pb-2b
+    typeset
+    ${classes}
+  `)
+    block
+
+
+mixin graphic(src)
+  figure(class=`
+    max-w-6c
+    pb-2b
+  `)
+    img(
+      src=src
+      alt='Decorative illustration'
+    )
+
+
 .container
   div(class=`
     w-full
@@ -15,42 +36,24 @@
         alt='Metamodern Design Limited'
       )
 
-    div(class=`
-      max-w-10c
-      pb-2b
+    +box(`
       text-lg c11_text-xl
       leading-lg-narrow c11_leading-xl-narrow
-      typeset
     `)
       != content.about1
       
-    div(class=`
-      flex
-      items-center
-      flex-wrap
-      pb-2b
+    +graphic('media/undraw-product-tour.svg')
+      
+    +box(`
+      text-base c11_text-lg
+      leading-base-narrow c11_leading-lg-narrow
     `)
-      figure(class=`
-        w-4c
-        pl-2b
-      `)
-        img(
-          src='media/undraw-product-tour.svg'
-          alt='Decorative illustration'
-        )
+      != content.about2
+    
+    +graphic('media/undraw-social-thinking.svg')
       
-      div(class=`
-        max-w-6c
-        text-base c11_text-lg
-        leading-base-narrow c11_leading-lg-narrow
-        typeset
-      `)
-        != content.about2
-      
-    div(class=`
-      max-w-10c
+    +box(`
       text-sm c11_text-base
       leading-sm-narrow c11_leading-base-narrow
-      typeset
     `)
       != content.about3
