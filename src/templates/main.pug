@@ -46,42 +46,45 @@ mixin textLg(classes='')
     block
 
 
-mixin graphic(src, alt='Decorative Illustration', classes='', imgClasses='')
+mixin graphic({ src, alt='Decorative Illustration', rounded=false }, classes='')
   figure(class=classes)
     img(
       src=src
       alt=alt
-      class=imgClasses
+      class=(rounded ? 'rounded' : '') 
     )
 
 
-mixin graphicSm(src, alt, classes='', imgClasses)
-  +graphic(src, alt, `
+mixin graphicSm(args, classes='')
+  +graphic(args, `
     max-w-3c
     pb-2b
     ${classes}
-  `, imgClasses)
+  `)
 
 
-mixin graphicMd(src, alt, classes='', imgClasses)
-  +graphic(src, alt, `
+mixin graphicMd(args, classes='')
+  +graphic(args, `
     max-w-5c
     pb-3b
     ${classes}
-  `, imgClasses)
+  `)
 
 
-mixin graphicLg(src, alt, classes='', imgClasses)
-  +graphic(src, alt, `
+mixin graphicLg(args, classes='')
+  +graphic(args, `
     max-w-10c
     pb-6b
     ${classes}
-  `, imgClasses)
+  `)
 
 
 #pageContent.container
   +stack('px-1b')
-    +graphicLg('media/metamodern-logo.svg', 'Metamodern Design Limited')
+    +graphicLg({ 
+      src: 'media/metamodern-logo.svg',
+      alt: 'Metamodern Design Limited'
+    })
 
     +textLg()
       != content.about1
@@ -89,17 +92,19 @@ mixin graphicLg(src, alt, classes='', imgClasses)
     +textBase()
       != content.about2
     
-    +graphicMd('media/undraw-product-tour.svg')
+    +graphicMd({ src: 'media/undraw-product-tour.svg' }, `
+      pt-one-and-half-b
+    )
       
     +textSm()
       != content.about3
     
-    +graphicMd('media/undraw-social-thinking.svg')
+    +graphicMd({ src: 'media/undraw-social-thinking.svg' })
       
     +textSm()
       != content.about4
     
-    +graphicMd('media/undraw-usability-testing.svg')
+    +graphicMd({ src: 'media/undraw-usability-testing.svg' })
     
     +textSm()
       != content.about5
@@ -112,26 +117,31 @@ mixin graphicLg(src, alt, classes='', imgClasses)
       border-light-blue-purple
     `)
       +graphicSm(
-        'media/portrait.png',
-        'Cartoon drawing of Daniel',
-        'min-w-1c',
-        'rounded'
+        {
+          src: 'media/portrait.png',
+          alt: 'Cartoon drawing of Daniel',
+          rounded: true
+        }, 
+        'min-w-1c'
       )
     
-      +textSm('pl-1b')
-        p
+      +textSm(`
+        max-w-4c c11_max-w-7c
+        pl-1b
+      `)
+        p.font-barlow-semi
           span(class=`
             font-medium
             italic
           `)= content.contact
-    
+
           span(class=`
             email
-            font-bold
-            text-medium-blue-green
-          `)= 'ngised.nredomatem@leinad'
+            font-semibold
+            text-medium-light-blue-green
+          `)= ' ngised.nredomatem@leinad '
 
           span(class=`
             font-medium
             italic
-          `)= '(click to copy).'
+          `)= ' (click to copy).'
