@@ -56,6 +56,14 @@ mixin graphic(src, alt='Decorative Illustration', classes='')
 
 mixin graphicSm(src, alt, classes='')
   +graphic(src, alt, `
+    max-w-3c
+    pb-2b
+    ${classes}
+  `)
+
+
+mixin graphicMd(src, alt, classes='')
+  +graphic(src, alt, `
     max-w-5c
     pb-3b
     ${classes}
@@ -80,14 +88,25 @@ mixin graphicLg(src, alt, classes='')
     +textBase()
       != content.about2
     
-    +graphicSm('media/undraw-product-tour.svg')
+    +graphicMd('media/undraw-product-tour.svg')
       
     +textSm()
       != content.about3
     
-    +graphicSm('media/undraw-social-thinking.svg')
+    +graphicMd('media/undraw-social-thinking.svg')
       
     +textSm()
       != content.about4
     
-    +graphicSm('media/undraw-usability-testing.svg')
+    +graphicMd('media/undraw-usability-testing.svg')
+    
+    +textSm()
+      != content.about5
+    
+    .flex
+      +graphicSm('media/portrait.png', 'Cartoon drawing of Daniel')
+    
+      +textSm()
+        p
+          span= content.contact
+          span.email= 'ngised.nredomatem@leinad'
