@@ -116,14 +116,11 @@ mixin graphicLg(args, classes='')
       border-t-1
       border-light-blue-purple
     `)
-      +graphicSm(
-        {
-          src: 'media/portrait.png',
-          alt: 'Cartoon drawing of Daniel',
-          rounded: true
-        }, 
-        'min-w-1c'
-      )
+      +graphicSm({
+        src: 'media/portrait.png',
+        alt: 'Cartoon drawing of Daniel',
+        rounded: true
+      }, 'min-w-1c')
     
       +textSm(`
         max-w-4c c11_max-w-7c
