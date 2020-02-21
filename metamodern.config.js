@@ -14,7 +14,7 @@ const assets = typefaces.map((name) => [
 
 const designSystemConfig = {
   variants: {
-    fontFamily: ['responsive']
+    fontFamily: ['responsive'],
     fontSize: ['responsive'],
     height: ['responsive'],
     lineHeight: ['responsive'],
