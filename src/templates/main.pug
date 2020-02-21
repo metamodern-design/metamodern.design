@@ -1,67 +1,93 @@
-mixin box(classes='')
+mixin stack(classes='')
+  div(class=`
+    w-full
+    flex
+    flex-col
+    items-center
+    ${classes}
+  `)
+    block
+
+
+mixin text(classes='')
   div(class=`
     max-w-10c
-    pb-2b
+    pb-3b
     typeset
     ${classes}
   `)
     block
 
 
-mixin graphic(src)
-  figure(class=`
-    max-w-5c
-    pb-2b
+mixin textSm(classes='')
+  +text(`
+    text-sm c11_text-base
+    leading-sm-narrow c11_leading-base-narrow
+    ${classes}
   `)
+    block
+
+
+mixin textBase(classes='')
+  +text(`
+    text-base c11_text-lg
+    leading-base-narrow c11_leading-lg-narrow
+    ${classes}
+  `)
+    block
+
+
+mixin textLg(classes='')
+  +text(`
+    text-lg c11_text-xl
+    leading-lg-narrow c11_leading-xl-narrow
+    ${classes}
+  `)
+    block
+
+
+mixin graphic(src, alt='Decorative Illustration', classes='')
+  figure(class=classes)
     img(
       src=src
-      alt='Decorative illustration'
+      alt=alt
     )
 
 
-.container
-  div(class=`
-    w-full
-    flex
-    flex-col
-    items-center
-    px-1b
+mixin graphicSm(src, alt, classes='')
+  +graphic(src, alt, `
+    max-w-5c
+    pb-3b
+    ${classes}
   `)
-    figure(class=`
-      max-w-10c
-      pb-6b
-    `)
-      img(
-        src='media/metamodern-logo.svg'
-        alt='Metamodern Design Limited'
-      )
 
-    +box(`
-      text-lg c11_text-xl
-      leading-lg-narrow c11_leading-xl-narrow
-    `)
+
+mixin graphicLg(src, alt, classes='')
+  +graphic(src, alt, `
+    max-w-10c
+    pb-6b
+    ${classes}
+  `)
+
+
+.container
+  +stack('px-1b')
+    +graphicLg('media/metamodern-logo.svg', 'Metamodern Design Limited')
+
+    +textLg()
       != content.about1
       
-    +box(`
-      text-base c11_text-lg
-      leading-base-narrow c11_leading-lg-narrow
-    `)
+    +textBase()
       != content.about2
     
-    +graphic('media/undraw-product-tour.svg')
+    +graphicSm('media/undraw-product-tour.svg')
       
-    +box(`
-      text-sm c11_text-base
-      leading-sm-narrow c11_leading-base-narrow
-    `)
+    +textSm()
       != content.about3
     
-    +graphic('media/undraw-social-thinking.svg')
+    +graphicSm('media/undraw-social-thinking.svg')
       
-    +box(`
-      text-sm c11_text-base
-      leading-sm-narrow c11_leading-base-narrow
-    `)
+    +textSm()
       != content.about4
     
-    +graphic('media/undraw-usability-testing.svg')
+    +graphicSm('media/undraw-usability-testing.svg')
