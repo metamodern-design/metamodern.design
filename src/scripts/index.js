@@ -1,5 +1,8 @@
+import addCopyListeners from './add-copy-listeners';
+
+
 try {
-  console.log('Script has loaded! 🥳');
+  addCopyListeners();
 } catch (err) {
-  console.error(err);
+  console.log(err);
 }

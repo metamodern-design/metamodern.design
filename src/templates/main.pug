@@ -78,7 +78,7 @@ mixin graphicLg(src, alt, classes='')
   `)
 
 
-.container
+#pageContent.container
   +stack('px-1b')
     +graphicLg('media/metamodern-logo.svg', 'Metamodern Design Limited')
 
@@ -103,10 +103,31 @@ mixin graphicLg(src, alt, classes='')
     +textSm()
       != content.about5
     
-    .flex
-      +graphicSm('media/portrait.png', 'Cartoon drawing of Daniel')
+    #contact(class=`
+      flex
+      max-w-10c
+      pt-2b
+      border-t-1
+      border-light-blue-purple
+    `)
+      +graphicSm('media/portrait.png', 'Cartoon drawing of Daniel', `
+        rounded
+      `)
     
-      +textSm()
+      +textSm('pl-1b')
         p
-          span= content.contact
-          span.email= 'ngised.nredomatem@leinad'
+          span(class=`
+            font-medium
+            italic
+          `)= content.contact
+    
+          span(class=`
+            email
+            font-bold
+            text-medium-blue-green
+          `)= 'ngised.nredomatem@leinad'
+
+          span(class=`
+            font-medium
+            italic
+          `)= '(click to copy).'
