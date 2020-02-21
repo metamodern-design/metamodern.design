@@ -27,7 +27,16 @@ html(lang='en')
       left-0
       w-screen
     `)
-      a(href='#contact')= 'Contact'
+      ul(class=`
+        flex
+        items-center
+        h-2b
+        pl-1b
+        font-semibold
+        c11_text-base
+        c11_leading-base
+      `)
+        li: a(href='#contact')= 'Contact'
     
     figure(class=`
       absolute
