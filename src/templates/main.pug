@@ -46,36 +46,37 @@ mixin textLg(classes='')
     block
 
 
-mixin graphic(src, alt='Decorative Illustration', classes='')
+mixin graphic(src, alt='Decorative Illustration', classes='', imgClasses='')
   figure(class=classes)
     img(
       src=src
       alt=alt
+      class=imgClasses
     )
 
 
-mixin graphicSm(src, alt, classes='')
+mixin graphicSm(src, alt, classes='', imgClasses)
   +graphic(src, alt, `
     max-w-3c
     pb-2b
     ${classes}
-  `)
+  `, imgClasses)
 
 
-mixin graphicMd(src, alt, classes='')
+mixin graphicMd(src, alt, classes='', imgClasses)
   +graphic(src, alt, `
     max-w-5c
     pb-3b
     ${classes}
-  `)
+  `, imgClasses)
 
 
-mixin graphicLg(src, alt, classes='')
+mixin graphicLg(src, alt, classes='', imgClasses)
   +graphic(src, alt, `
     max-w-10c
     pb-6b
     ${classes}
-  `)
+  `, imgClasses)
 
 
 #pageContent.container
@@ -110,9 +111,12 @@ mixin graphicLg(src, alt, classes='')
       border-t-1
       border-light-blue-purple
     `)
-      +graphicSm('media/portrait.png', 'Cartoon drawing of Daniel', `
-        rounded
-      `)
+      +graphicSm(
+        'media/portrait.png',
+        'Cartoon drawing of Daniel',
+        'min-w-1c',
+        'rounded'
+      )
     
       +textSm('pl-1b')
         p
