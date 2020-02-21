@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@metamodern/static": "^0.4.0",
+    "clipboard-copy": "^3.1.0",
     "core-js": "^3.6.4",
     "tailwindcss": "^1.1.4",
     "typeface-barlow": "0.0.71",
