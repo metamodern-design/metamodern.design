@@ -39,7 +39,10 @@ html(lang='en')
           leading-base c11_leading-lg
           tracking-wide
         `)
-          li: a(href='#contact')= 'Contact'
+          li: a(href='#contact')
+            span: img(src='media/mail.svg' alt='Mail icon')
+            | 
+            span= 'Contact'
     
     figure(class=`
       absolute
