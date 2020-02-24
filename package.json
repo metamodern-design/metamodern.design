@@ -11,7 +11,6 @@
   "scripts": {
     "prebuild": "del dist/*",
     "build": "metamodern-static",
-    "deploy": "npm run build && gh-pages -d dist",
     "merge:dev": "git checkout master && git pull && git merge dev -s recursive -Xtheirs",
     "lint": "eslint --fix src/scripts",
     "sync": "git pull && git add . && git commit -m 'automated sync' && git push",
